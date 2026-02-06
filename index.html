@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Valentine</title>
+
+<style>
+body {
+  text-align: center;
+  font-family: Arial;
+  background: #fff5f7;
+  margin-top: 80px;
+}
+
+img {
+  width: 220px;
+}
+
+h2 {
+  margin: 20px;
+}
+
+button {
+  font-size: 24px;
+  padding: 12px 40px;
+  margin: 10px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+#yes {
+  background: #ff4d6d;
+  color: white;
+}
+
+#no {
+  background: #ccc;
+  position: absolute;
+}
+
+#result {
+  font-size: 36px;
+  margin-top: 30px;
+  color: #ff4d6d;
+}
+</style>
+</head>
+
+<body>
+
+<img src="https://i.imgur.com/9M0Yp7R.png">
+
+<h2>Will you be my valentine?</h2>
+
+<button id="yes" onclick="love()">Yes</button>
+<button id="no" onmouseover="moveNo()">No</button>
+
+<div id="result"></div>
+
+<script>
+function moveNo() {
+  let btn = document.getElementById("no");
+  btn.style.top = Math.random() * window.innerHeight + "px";
+  btn.style.left = Math.random() * window.innerWidth + "px";
+}
+
+function love() {
+  document.body.innerHTML = "<h1 style='font-size:60px;color:#ff4d6d'>YAY ❤️</h1>";
+}
+</script>
+
+</body>
+</html>
